@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Template for HTML email with attachment</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{greeting(${recipientName})}"></p>
+        <br/>
+        <p><span th:text="${message}"></span></p>
+        <br/>
+        <p>
+            Regards, <br />
+            &emsp; <em th:text="${regardsName}"></em>
+        </p>
+    </body>
+</html>

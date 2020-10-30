@@ -1,0 +1,18 @@
+package KieRule;
+import com.ghf.email.model.EmailData;
+
+rule "30Minutes"
+
+when
+orderObject : EmailData(sizeOfHalfAnHour <= 5 );
+then
+orderObject.setStop(true);
+end;
+
+rule "24Hours"
+
+when
+orderObject : EmailData(sizeOfWithinADay <= 5 );
+then
+orderObject.setStop(true);
+end;
